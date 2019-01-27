@@ -5,13 +5,25 @@ import NavBurger from './NavBurger';
 
 class GlobalNav extends React.Component {
 
+    state = {
+        open: false
+    };
+
     constructor(props) {
         super(props);
+
+        this.handleMenuOpen = this.handleMenuOpen.bind(this);
+    }
+
+    handleMenuOpen() {
+        this.setState({
+            open: !this.state.open
+        });
     }
 
     render() {
 
-        let customStyle = this.props.customStyle;
+        let customStyle = {...this.props.customStyle};
 
         if (this.props.backgroundColor) {
             customStyle.backgroundColor = this.props.backgroundColor;
@@ -19,7 +31,7 @@ class GlobalNav extends React.Component {
 
         return (
             <nav className={'globalnav'} style={customStyle}>
-                <NavBurger />
+                <NavBurger open={this.state.open} onClick={this.handleMenuOpen} />
             </nav>
         );
     }
