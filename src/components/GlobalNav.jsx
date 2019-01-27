@@ -5,12 +5,12 @@ import NavBurger from './NavBurger';
 
 class GlobalNav extends React.Component {
 
-    state = {
-        open: false
-    };
-
     constructor(props) {
         super(props);
+
+        this.state = {
+            open: false
+        };
 
         this.handleMenuOpen = this.handleMenuOpen.bind(this);
     }

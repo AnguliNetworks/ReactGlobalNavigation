@@ -1,8 +1,12 @@
 {
-  "name": "globalnav",
-  "version": "1.0.0",
-  "description": "TODO <----------------------------------------------------------------------------------------",
+  "name": "@anguli/globalnav",
+  "version": "1.0.2",
+  "description": "A modern functional react navigation",
   "main": "lib/globalnav.min.js",
+  "files": [
+    "lib/globalnav.min.js",
+    "lib/globalnav.js"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/AnguliNetworks/ReactGlobalNavigation"
@@ -29,6 +33,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-add-module-exports": "^1.0.0",
+    "css-loader": "^2.1.0",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
