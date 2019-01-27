@@ -27,11 +27,26 @@ const config = {
     },
     module: {
         rules: [
-
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader'
+            },
+            {
+                test: /\.jsx$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader',
+                query: {
+                    presets: [
+                        '@babel/env',
+                        '@babel/preset-react'
+                    ]
+                }
+            },
+            {
+                test: /\.css$/,
+                exclude: /node_modules/,
+                use: ['style-loader', 'css-loader']
             }
         ]
     },
