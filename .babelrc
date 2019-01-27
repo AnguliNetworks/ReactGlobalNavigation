@@ -1,0 +1,11 @@
+{
+  "presets": [
+    "@babel/env",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/plugin-transform-modules-umd",
+    "babel-plugin-add-module-exports",
+    "@babel/plugin-proposal-export-default-from"
+  ]
+}
