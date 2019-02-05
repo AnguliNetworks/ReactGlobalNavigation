@@ -4,8 +4,7 @@
   "description": "A modern functional react navigation",
   "main": "lib/globalnav.min.js",
   "files": [
-    "lib/@anguli/globalnav.min.js",
-    "lib/@anguli/globalnav.js"
+    "index.js"
   ],
   "repository": {
     "type": "git",

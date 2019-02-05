@@ -8,7 +8,7 @@ let outputFile, mode;
 
 if (env === 'build') {
     mode = 'production';
-    outputFile = `${libraryName}.min.js`;
+    outputFile = `index.js`;
 } else {
     mode = 'development';
     outputFile = `${libraryName}.js`;
@@ -18,7 +18,7 @@ const config = {
     mode,
     entry: __dirname + '/src/build.js',
     output: {
-        path: __dirname + '/lib',
+        path: __dirname + '/',
         filename: outputFile,
         library: libraryName,
         libraryTarget: 'umd',
