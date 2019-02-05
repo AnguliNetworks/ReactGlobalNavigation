@@ -24,14 +24,14 @@ class GlobalNav extends React.Component {
 
     render() {
 
-        let customStyle = {...this.props.customStyle};
+        let style = {...this.props.style};
 
         if (this.props.backgroundColor) {
-            customStyle.backgroundColor = this.props.backgroundColor;
+            style.backgroundColor = this.props.backgroundColor;
         }
 
         return (
-            <nav className={classnames('globalnav', {open: this.state.open})} style={customStyle}>
+            <nav className={classnames('globalnav', {open: this.state.open})} style={style}>
                 <div className={'content'}>
                     <NavBurger open={this.state.open} onClick={this.handleMenuOpen} />
                     {this.props.children}
@@ -43,13 +43,13 @@ class GlobalNav extends React.Component {
 
 GlobalNav.propTypes = {
     backgroundColor: PropTypes.string,
-    customStyle: PropTypes.object,
+    style: PropTypes.object,
     children: PropTypes.node.isRequired
 };
 
 GlobalNav.defaultProps = {
-    backgroundColor: undefined,
-    customStyle: {}
+    backgroundColor: 'transparent',
+    style: {}
 };
 
 export default GlobalNav;

@@ -38,7 +38,10 @@ class GlobalNavBrand extends Component {
         } = this.props;
 
         if (image) {
-            style.backgroundImage = `url(${image})`;
+            style = {
+                ...style,
+                backgroundImage: `url(${image})`
+            };
         }
 
         return (
