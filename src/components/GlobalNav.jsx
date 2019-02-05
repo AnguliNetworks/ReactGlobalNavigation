@@ -31,7 +31,10 @@ class GlobalNav extends React.Component {
 
         return (
             <nav className={'globalnav'} style={customStyle}>
-                <NavBurger open={this.state.open} onClick={this.handleMenuOpen} />
+                <div className={'content'}>
+                    <NavBurger open={this.state.open} onClick={this.handleMenuOpen} />
+                    {this.props.children}
+                </div>
             </nav>
         );
     }
@@ -39,7 +42,8 @@ class GlobalNav extends React.Component {
 
 GlobalNav.propTypes = {
     backgroundColor: PropTypes.string,
-    customStyle: PropTypes.object
+    customStyle: PropTypes.object,
+    children: PropTypes.node.isRequired
 };
 
 GlobalNav.defaultProps = {
