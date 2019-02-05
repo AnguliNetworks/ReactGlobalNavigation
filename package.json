@@ -1,6 +1,6 @@
 {
   "name": "@anguli/globalnav",
-  "version": "1.0.4-beta",
+  "version": "1.0.5",
   "description": "A modern functional react navigation",
   "main": "lib/globalnav.min.js",
   "files": [
