@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../css/style.css';
 import NavBurger from './NavBurger';
+import classnames from 'classnames';
 
 class GlobalNav extends React.Component {
 
@@ -30,7 +31,7 @@ class GlobalNav extends React.Component {
         }
 
         return (
-            <nav className={'globalnav'} style={customStyle}>
+            <nav className={classnames('globalnav', {open: this.state.open})} style={customStyle}>
                 <div className={'content'}>
                     <NavBurger open={this.state.open} onClick={this.handleMenuOpen} />
                     {this.props.children}
