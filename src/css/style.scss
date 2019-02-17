@@ -44,6 +44,17 @@ $desktop: 'only screen and(min-width: 1068px)';
   @include transform($transform);
 }
 
+@mixin hidden() {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
 /*
   NavBar
  */
@@ -66,6 +77,29 @@ nav.globalnav {
     width: 95%;
     padding: 8px 0;
 
+    @media #{$tablet} {
+      max-width: 698px;
+      height: 32px;
+      padding: 16px 0;
+    }
+
+    @media #{$desktop} {
+      max-width: 980px;
+    }
+
+    @media #{$tablet} {
+      div.navburger {
+        @include hidden();
+      }
+    }
+
+    div.addition {
+      position: absolute;
+      top: 16px;
+      right: 0;
+      height: 32px;
+    }
+
     .nav-brand {
       position: relative;
       display: inline-block;
@@ -75,6 +109,11 @@ nav.globalnav {
       font-size: 28px;
       color: #fff;
       text-decoration: none;
+      cursor: pointer;
+
+      @media #{$tablet} {
+        top: 0;
+      }
 
       &.image {
         position: absolute;
@@ -86,6 +125,14 @@ nav.globalnav {
         height: 32px;
         left: 50%;
         margin-left: -16px;
+
+        @media #{$tablet} {
+          position: relative;
+          display: inline-block;
+          top: 0;
+          left: 0;
+          margin-left: 0;
+        }
       }
     }
 
@@ -105,6 +152,13 @@ nav.globalnav {
       visibility: hidden;
       @include transition(visibility 0s linear 1s);
 
+      @media #{$tablet} {
+        display: inline-block;
+        visibility: visible;
+        height: 32px;
+        padding: 0 16px;
+      }
+
       li.entry {
         display: block;
         width: 100%;
@@ -115,6 +169,18 @@ nav.globalnav {
         opacity: 0;
         pointer-events: none;
         @include transition-transform-extra($defaultTransitionTime, scale(1, 1) translateY(24px), opacity $defaultTransitionTime);
+
+        @media #{$tablet} {
+          display: inline-block;
+          width: auto;
+          margin-top: 0;
+          border-bottom: none;
+          opacity: 1;
+          height: 32px;
+          padding: 7px 12px;
+          pointer-events: auto;
+          @include transform(none);
+        }
 
         &:last-child {
           border-bottom: none;
