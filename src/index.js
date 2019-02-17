@@ -14,4 +14,6 @@ ReactDOM.render(<React.Fragment>
             <GlobalNavEntry href={'#'}>Contact</GlobalNavEntry>
         </GlobalNavMenu>
     </GlobalNav>
+    <h1 style={{marginTop: '64px'}}>Further Example Content</h1>
+    <p>Lorem Ipsum dolor sit amet.</p>
 </React.Fragment>, document.getElementById('root'));
